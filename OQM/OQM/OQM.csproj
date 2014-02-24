@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2BBF1EC4-66DD-4B61-AD37-281514947C44}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OQM</RootNamespace>
+    <AssemblyName>OQM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>OQM.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>OQM.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.30816.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ErrorPage.xaml.cs">
+      <DependentUpon>ErrorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lieux.xaml.cs">
+      <DependentUpon>Lieux.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="deck.cs" />
+    <Compile Include="Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewGame.xaml.cs">
+      <DependentUpon>NewGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu.xaml.cs">
+      <DependentUpon>Jeu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Detail.xaml.cs">
+      <DependentUpon>Detail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regles.xaml.cs">
+      <DependentUpon>Regles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\SampleDataSource1\SampleDataSource1.xaml.cs">
+      <DependentUpon>SampleDataSource1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\SampleDataSource\SampleDataSource.xaml.cs">
+      <DependentUpon>SampleDataSource.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="ErrorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Lieux.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Jeu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Regles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SampleData\SampleDataSource1\SampleDataSource1.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\SampleDataSource\SampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\SampleDataSource1\SampleDataSource1.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ApplicationIcon.png" />
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="fourche.png" />
+    <Resource Include="Dice1.png" />
+    <Resource Include="Dice2.png" />
+    <Resource Include="Dice3.png" />
+    <Resource Include="Dice4.png" />
+    <Resource Include="Dice5.png" />
+    <Resource Include="Dice6.png" />
+    <Resource Include="illus\jmetire.png" />
+    <Resource Include="illus\joker.png" />
+    <Resource Include="illus\roulette.png" />
+    <Resource Include="illus\tropcher.png" />
+    <Resource Include="illus\no.jpg" />
+    <Resource Include="illus\derniermot.jpg" />
+    <Resource Include="illus\bof.jpg" />
+    <Resource Include="illus\plusone.png" />
+    <Resource Include="illus\trade.jpg" />
+    <Resource Include="illus\never.png" />
+    <Resource Include="illus\telepathie.jpg" />
+    <Resource Include="illus\again.png" />
+    <Resource Include="illus\dsk.jpg" />
+    <Resource Include="illus\notagain.png" />
+    <Resource Include="illus\YEAH.jpg" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Resource Include="SampleData\SampleDataSource1\SampleDataSource1_Files\image01.png" />
+    <Resource Include="SampleData\SampleDataSource1\SampleDataSource1_Files\image02.png" />
+    <Resource Include="SampleData\SampleDataSource1\SampleDataSource1_Files\image03.png" />
+    <Resource Include="SampleData\SampleDataSource1\SampleDataSource1_Files\image04.png" />
+    <Resource Include="SampleData\SampleDataSource1\SampleDataSource1_Files\image05.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\Chrysanthemum.jpg" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\Desert.jpg" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\Hydrangeas.jpg" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image01.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image02.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image03.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image04.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image05.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\Jellyfish.jpg" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\Koala.jpg" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\Lighthouse.jpg" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\Penguins.jpg" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\Tulips.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Desktop\ShakeGestures\ShakeGestures\ShakeGestures.csproj">
+      <Project>{F5CE25E6-CF76-43AE-BBB2-2C98B21BCCD8}</Project>
+      <Name>ShakeGestures</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
